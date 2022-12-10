@@ -11,7 +11,7 @@
   - API service: **2 hours**
   - WEB UI:
 - **Task list**
-  - API service:
+  - API service: **35 minutes**
   - WEB UI:
 - **Task detail**
   - API service:
