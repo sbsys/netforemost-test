@@ -7,8 +7,18 @@
 
 ## User stories
 
-- Create note:
-- Note list:
-- Note detail:
-- Edit note:
-- Search note:
+- **Create task**
+  - API service: **2 hours**
+  - WEB UI:
+- **Task list**
+  - API service:
+  - WEB UI:
+- **Task detail**
+  - API service:
+  - WEB UI:
+- **Edit task**
+  - API service:
+  - WEB UI:
+- **Search task**
+  - API service:
+  - WEB UI:
