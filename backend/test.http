@@ -2,8 +2,6 @@ GET http://localhost:8080/microservice/api/v1/tasks/
 
 ###
 
-GET http://localhost:8080/microservice/api/v1/tasks/:id
-
 ###
 
 POST http://localhost:8080/microservice/api/v1/tasks/

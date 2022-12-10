@@ -5,9 +5,11 @@ export const Symbols = {
     TaskRepository: Symbol.for('TaskRepository'),
     /* use cases */
     CreateTaskUseCase: Symbol.for('CreateTaskUseCase'),
+    GetTaskListUseCase: Symbol.for('GetTaskListUseCase'),
     /* handlers */
     /* controllers */
     CreateTaskController: Symbol.for('CreateTaskController'),
+    GetTaskListController: Symbol.for('GetTaskListController'),
     /* routes */
     TaskRoutes: Symbol.for('TaskRoutes'),
     /* apps */
