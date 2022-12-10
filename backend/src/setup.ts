@@ -3,9 +3,9 @@ import { Api } from './apps';
 /* handlers */
 
 function handlers(): void {
-    const handlerList: [] = [];
+    /* const handlerList: [] = [];
 
-    handlerList.forEach(handler => container.resolve(handler).setupSubscriptions());
+    handlerList.forEach(handler => container.resolve(handler).setupSubscriptions()); */
 }
 
 function setup() {

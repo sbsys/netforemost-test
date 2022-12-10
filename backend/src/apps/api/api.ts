@@ -3,13 +3,14 @@ import { inject, injectable } from 'inversify';
 import { CONSTANTS, Symbols } from '../../env';
 import { App } from '../../types';
 import { mergeRoutes } from '../../utils';
+import { TaskRoutes } from './routes';
 
 @injectable()
 export class Api implements App {
     private app = express();
     private apiPathV1 = mergeRoutes('/', CONSTANTS.MICROSERVICE, '/api/v1');
 
-    constructor(/* @inject(Symbols.AuthenticationRoutes) private authenticationRoutes: AuthenticationRoutes */) {
+    constructor(@inject(Symbols.TaskRoutes) private taskRoutes: TaskRoutes) {
         this.configure();
         this.routes();
     }
@@ -23,7 +24,7 @@ export class Api implements App {
     }
 
     private routes(): void {
-        /* this.authenticationRoutes.configure(this.app, mergeRoutes(this.apiPathV1, '/auth')); */
+        this.taskRoutes.configure(this.app, mergeRoutes(this.apiPathV1, '/tasks'));
     }
 
     run(): void {
