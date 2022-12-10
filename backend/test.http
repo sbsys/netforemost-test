@@ -1,13 +1,22 @@
-GET http://localhost:8080/microservice/api/v1/auth/
+GET http://localhost:8080/microservice/api/v1/tasks/
 
 ###
 
-POST http://localhost:8080/microservice/api/v1/auth/
+GET http://localhost:8080/microservice/api/v1/tasks/:id
+
+###
+
+POST http://localhost:8080/microservice/api/v1/tasks/
 Content-Type: application/json
 
 {
-    "email": "admin@mail.com",
-    "password": "qwerty"
+    "title": "Task 1",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, blanditiis."
 }
 
 ###
+
+PATCH http://localhost:8080/microservice/api/v1/tasks/:id
+Content-Type: application/json
+
+{}
