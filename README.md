@@ -14,11 +14,11 @@
   - API service: **35 minutes**
   - WEB UI:
 - **Task detail**
-  - API service:
+  - API service: **No service**
   - WEB UI:
 - **Edit task**
-  - API service:
+  - API service: **45 minutes**
   - WEB UI:
 - **Search task**
-  - API service:
+  - API service: **No service**
   - WEB UI:
