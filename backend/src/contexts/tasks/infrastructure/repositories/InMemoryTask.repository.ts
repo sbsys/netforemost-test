@@ -11,7 +11,6 @@ const TaskDB: TaskModel[] = [];
 @injectable()
 export class InMemoryTaskRepository implements TaskRepository {
     constructor(@inject(Symbols.TaskSerializer) private taskSerializer: TaskSerializer) {}
-
     async isTitleAvailable(title: TitleValueObject): Promise<Result<TaskError, void>> {
         if (TaskDB.find(task => task.title === title.value)) return Result.Error(TaskError.TitleAlreadyExistError());
 
@@ -25,8 +24,16 @@ export class InMemoryTaskRepository implements TaskRepository {
 
         TaskDB.push({ ...this.taskSerializer.fromEntityToDTO(task) });
 
-        console.log(TaskDB);
-
         return Result.Success();
+    }
+
+    async readTaskList(): Promise<Result<TaskError, TaskEntity[]>> {
+        const data = TaskDB.map(task => this.taskSerializer.fromModelToEntity(task));
+
+        const foundException = Result.Combine(data);
+
+        if (foundException.isError) return Result.Error(foundException.getError());
+
+        return Result.Success(data.map(task => task.getSuccess()));
     }
 }

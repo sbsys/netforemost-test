@@ -7,4 +7,6 @@ export interface TaskRepository {
     isTitleAvailable(title: TitleValueObject): Promise<Result<TaskError, void>>;
 
     createTask(task: TaskEntity): Promise<Result<TaskError, void>>;
+
+    readTaskList(): Promise<Result<TaskError, TaskEntity[]>>;
 }
