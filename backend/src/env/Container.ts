@@ -7,11 +7,15 @@ import { InMemoryTaskRepository } from '../contexts/tasks/infrastructure/reposit
 /* repositories */
 import { TaskRepository } from '../contexts/tasks/domain';
 /* use cases */
-import { CreateTaskUseCase } from '../contexts/tasks/application/commands';
+import { CreateTaskUseCase, UpdateTaskUseCase } from '../contexts/tasks/application/commands';
 import { GetTaskListUseCase } from '../contexts/tasks/application/queries';
 /* handlers */
 /* controllers */
-import { CreateTaskController, GetTaskListController } from '../contexts/tasks/infrastructure/controllers';
+import {
+    CreateTaskController,
+    GetTaskListController,
+    UpdateTaskController,
+} from '../contexts/tasks/infrastructure/controllers';
 /* routes */
 import { TaskRoutes } from '../apps/api/routes';
 /* apps */
@@ -25,10 +29,12 @@ container.bind<TaskRepository>(Symbols.TaskRepository).to(InMemoryTaskRepository
 /* use cases */
 container.bind<CreateTaskUseCase>(Symbols.CreateTaskUseCase).to(CreateTaskUseCase);
 container.bind<GetTaskListUseCase>(Symbols.GetTaskListUseCase).to(GetTaskListUseCase);
+container.bind<UpdateTaskUseCase>(Symbols.UpdateTaskUseCase).to(UpdateTaskUseCase);
 /* handlers */
 /* controllers */
 container.bind<CreateTaskController>(Symbols.CreateTaskController).to(CreateTaskController);
 container.bind<GetTaskListController>(Symbols.GetTaskListController).to(GetTaskListController);
+container.bind<UpdateTaskController>(Symbols.UpdateTaskController).to(UpdateTaskController);
 /* routes */
 container.bind<TaskRoutes>(Symbols.TaskRoutes).to(TaskRoutes);
 /* apps */

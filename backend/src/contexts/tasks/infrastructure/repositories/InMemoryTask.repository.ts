@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 import { Symbols } from '../../../../env';
-import { Result } from '../../../shared/domain';
+import { Result, UniqueEntityID } from '../../../shared/domain';
 import { TaskEntity, TaskError, TaskRepository } from '../../domain';
 import { TitleValueObject } from '../../domain/Title.value';
 import { TaskModel } from '../models';
@@ -35,5 +35,27 @@ export class InMemoryTaskRepository implements TaskRepository {
         if (foundException.isError) return Result.Error(foundException.getError());
 
         return Result.Success(data.map(task => task.getSuccess()));
+    }
+
+    async readTaskById(taskId: UniqueEntityID): Promise<Result<TaskError, TaskEntity>> {
+        const foundedTask = TaskDB.find(task => task.id === taskId.toString());
+
+        if (!foundedTask) return Result.Error(TaskError.NotFoundIdError());
+
+        const task = this.taskSerializer.fromModelToEntity(foundedTask);
+
+        if (task.isError) return Result.Error(task.getError());
+
+        return Result.Success(task.getSuccess());
+    }
+
+    async updateTask(task: TaskEntity): Promise<Result<TaskError, void>> {
+        const foundedIndex = TaskDB.findIndex(task => task.id === task.id);
+
+        if (foundedIndex === -1) return Result.Error(TaskError.NotFoundIdError());
+
+        TaskDB[foundedIndex] = this.taskSerializer.fromEntityToDTO(task);
+
+        return Result.Success();
     }
 }
