@@ -18,7 +18,7 @@
   - WEB UI: **1 hour**
 - **Edit note**
   - API service: **45 minutes**
-  - WEB UI:
+  - WEB UI: **30 minutes**
 - **Search note**
   - API service: **No service**
   - WEB UI: **Included into *Note list* time**
