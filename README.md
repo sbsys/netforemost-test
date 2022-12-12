@@ -24,3 +24,10 @@
   - WEB UI: **Included into *Note list* time**
 - **Fix domain definition**
   - API service: **30 minutes**
+
+## Start projects
+
+No production build yet; please, execute each project in its own console.
+
+- ***`npm start --prefix frontend/`***
+- ***`npm start --prefix backend/`***
