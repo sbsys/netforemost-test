@@ -22,3 +22,5 @@
 - **Search note**
   - API service: **No service**
   - WEB UI: **Included into *Note list* time**
+- **Fix domain definition**
+  - API service: **30 minutes**
