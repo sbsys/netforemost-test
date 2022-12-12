@@ -2,41 +2,41 @@ import 'reflect-metadata';
 import { Container } from 'inversify';
 import { Symbols } from './Symbols';
 /* serializers */
-import { TaskSerializer } from '../contexts/tasks/infrastructure/serializers';
-import { InMemoryTaskRepository } from '../contexts/tasks/infrastructure/repositories';
+import { NoteSerializer } from '../contexts/notes/infrastructure/serializers';
+import { InMemoryNoteRepository } from '../contexts/notes/infrastructure/repositories';
 /* repositories */
-import { TaskRepository } from '../contexts/tasks/domain';
+import { NoteRepository } from '../contexts/notes/domain';
 /* use cases */
-import { CreateTaskUseCase, UpdateTaskUseCase } from '../contexts/tasks/application/commands';
-import { GetTaskListUseCase } from '../contexts/tasks/application/queries';
+import { CreateNoteUseCase, UpdateNoteUseCase } from '../contexts/notes/application/commands';
+import { GetNoteListUseCase } from '../contexts/notes/application/queries';
 /* handlers */
 /* controllers */
 import {
-    CreateTaskController,
-    GetTaskListController,
-    UpdateTaskController,
-} from '../contexts/tasks/infrastructure/controllers';
+    CreateNoteController,
+    GetNoteListController,
+    UpdateNoteController,
+} from '../contexts/notes/infrastructure/controllers';
 /* routes */
-import { TaskRoutes } from '../apps/api/routes';
+import { NoteRoutes } from '../apps/api/routes';
 /* apps */
 import { Api } from '../apps';
 
 const container = new Container();
 /* serializers */
-container.bind<TaskSerializer>(Symbols.TaskSerializer).to(TaskSerializer);
+container.bind<NoteSerializer>(Symbols.NoteSerializer).to(NoteSerializer);
 /* repositories */
-container.bind<TaskRepository>(Symbols.TaskRepository).to(InMemoryTaskRepository);
+container.bind<NoteRepository>(Symbols.NoteRepository).to(InMemoryNoteRepository);
 /* use cases */
-container.bind<CreateTaskUseCase>(Symbols.CreateTaskUseCase).to(CreateTaskUseCase);
-container.bind<GetTaskListUseCase>(Symbols.GetTaskListUseCase).to(GetTaskListUseCase);
-container.bind<UpdateTaskUseCase>(Symbols.UpdateTaskUseCase).to(UpdateTaskUseCase);
+container.bind<CreateNoteUseCase>(Symbols.CreateNoteUseCase).to(CreateNoteUseCase);
+container.bind<GetNoteListUseCase>(Symbols.GetNoteListUseCase).to(GetNoteListUseCase);
+container.bind<UpdateNoteUseCase>(Symbols.UpdateNoteUseCase).to(UpdateNoteUseCase);
 /* handlers */
 /* controllers */
-container.bind<CreateTaskController>(Symbols.CreateTaskController).to(CreateTaskController);
-container.bind<GetTaskListController>(Symbols.GetTaskListController).to(GetTaskListController);
-container.bind<UpdateTaskController>(Symbols.UpdateTaskController).to(UpdateTaskController);
+container.bind<CreateNoteController>(Symbols.CreateNoteController).to(CreateNoteController);
+container.bind<GetNoteListController>(Symbols.GetNoteListController).to(GetNoteListController);
+container.bind<UpdateNoteController>(Symbols.UpdateNoteController).to(UpdateNoteController);
 /* routes */
-container.bind<TaskRoutes>(Symbols.TaskRoutes).to(TaskRoutes);
+container.bind<NoteRoutes>(Symbols.NoteRoutes).to(NoteRoutes);
 /* apps */
 container.bind<Api>(Symbols.Api).to(Api);
 

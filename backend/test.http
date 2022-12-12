@@ -1,23 +1,23 @@
-GET http://localhost:8080/microservice/api/v1/tasks/
+GET http://localhost:8080/microservice/api/v1/notes/
 
 ###
 
 ###
 
-POST http://localhost:8080/microservice/api/v1/tasks/
+POST http://localhost:8080/microservice/api/v1/notes/
 Content-Type: application/json
 
 {
-    "title": "Task 1",
+    "title": "Note 1",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, blanditiis."
 }
 
 ###
-### replace ":taskId" by the current id returned by GET request
-PATCH http://localhost:8080/microservice/api/v1/tasks/:taskId
+### replace ":noteId" by the current id returned by GET request
+PATCH http://localhost:8080/microservice/api/v1/notes/:noteId
 Content-Type: application/json
 
 {
-    "title": "Task 1 updated",
+    "title": "Note 1 updated",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, blanditiis."
 }
