@@ -4,3 +4,5 @@ export interface NoteModel {
     body: string;
     created: string;
 }
+
+export interface CreateNoteDTO extends Omit<NoteModel, 'id' | 'created'> {}
