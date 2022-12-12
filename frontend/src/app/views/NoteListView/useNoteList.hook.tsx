@@ -85,6 +85,13 @@ export const useNoteList = () => {
         [navigate]
     );
 
+    const getNoteById = useCallback(
+        (noteId: string) => {
+            return notes.find(note => note.id === noteId);
+        },
+        [notes]
+    );
+
     /* reactivity */
     useEffect(() => {
         handleGetNoteList();
@@ -135,6 +142,7 @@ export const useNoteList = () => {
         handleGetNoteList,
         handleNavigateToEditNote,
         handleNavigateToDetailNote,
+        getNoteById,
         /* props */
         createNoteButtonProps,
         searchInputProps,

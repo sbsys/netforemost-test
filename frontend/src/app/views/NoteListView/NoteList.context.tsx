@@ -10,6 +10,7 @@ const Context = createContext<NoteListContextProps>({
     handleGetNoteList: () => {},
     handleNavigateToEditNote: () => () => {},
     handleNavigateToDetailNote: () => () => {},
+    getNoteById: () => undefined,
     /* props */
     createNoteButtonProps: {},
     searchInputProps: { field: {} },

@@ -12,6 +12,7 @@ export interface NoteListContextProps {
     handleGetNoteList: () => void;
     handleNavigateToEditNote: (noteId: string) => () => void;
     handleNavigateToDetailNote: (noteId: string) => () => void;
+    getNoteById: (noteId: string) => NoteModel | undefined;
     /* props */
     createNoteButtonProps: ButtonProps;
     searchInputProps: FieldSetProps;

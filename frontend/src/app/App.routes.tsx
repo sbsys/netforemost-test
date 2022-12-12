@@ -2,7 +2,7 @@
 import { FC, memo } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 /* views */
-import { CreateNoteView, NoteListView } from './views';
+import { CreateNoteView, NoteDetailView, NoteListView } from './views';
 
 const AppRoutes: FC = () => {
     return (
@@ -12,9 +12,9 @@ const AppRoutes: FC = () => {
             <Route path="notes" element={<NoteListView />}>
                 <Route path="create" element={<CreateNoteView />} />
 
-                <Route path=":taskId/detail" element={<>Detail</>} />
+                <Route path=":noteId/detail" element={<NoteDetailView />} />
 
-                <Route path=":taskId/edit" element={<>Edit</>} />
+                <Route path=":noteId/edit" element={<>Edit</>} />
             </Route>
 
             <Route path="*" element={<span>404</span>} />
