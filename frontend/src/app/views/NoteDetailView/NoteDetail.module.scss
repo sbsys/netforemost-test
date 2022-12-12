@@ -1,0 +1,50 @@
+@import 'styles';
+
+.NoteDetail {
+    @include gap(all sm);
+    @include width(xl, component);
+    max-width: 100%;
+
+    .Header {
+        @include flex(row, center, center);
+        @include font-weight(lg);
+        @include gap(all sm);
+    }
+
+    .Content {
+        @include flex;
+        @include gap(all md);
+        @include padding(x sm);
+
+        & > span {
+            text-align: justify;
+        }
+    }
+
+    .Title {
+        @include flex;
+        @include gap(all xs split);
+
+        & > h3 {
+            @include font-size(lg);
+            @include font-weight(lg);
+        }
+
+        & > span {
+            @include font-size(sm);
+            @include font-weight(lg);
+            font-style: italic;
+        }
+    }
+
+    .Actions {
+        @include gap(all sm);
+        @include padding(x sm);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        & > button {
+            overflow: hidden;
+        }
+    }
+}
