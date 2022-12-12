@@ -5,14 +5,14 @@ import { apiRequestHandler } from 'shared/handlers';
 /* constants */
 import { AppApiService } from 'app/constants';
 /* types */
-import { ApiResponse, TaskModel } from '../types';
+import { ApiResponse, NoteModel } from '../types';
 
-interface GetTaskListProps {}
+interface GetNoteListProps {}
 
-export const getTaskListService = async (props?: GetTaskListProps): Promise<ApiResponse<TaskModel[]>> => {
+export const getNoteListService = async (props?: GetNoteListProps): Promise<ApiResponse<NoteModel[]>> => {
     return await apiRequestHandler({
         instance: AppApiService,
-        endpoint: '/tasks',
+        endpoint: '/notes',
         body: props,
         responseSerializer: async data => apiSerializer(data),
         errorSerializer: async error => apiErrorSerializer(error),

@@ -1,14 +1,15 @@
 /* react */
 import { FC, memo } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { TaskListView } from './views';
+/* views */
+import { NoteListView } from './views';
 
 const AppRoutes: FC = () => {
     return (
         <Routes>
-            <Route index element={<Navigate to="tasks" replace />} />
+            <Route index element={<Navigate to="notes" replace />} />
 
-            <Route path="tasks" element={<TaskListView />}>
+            <Route path="notes" element={<NoteListView />}>
                 <Route path="create" element={<>Create</>} />
 
                 <Route path=":taskId/detail" element={<>Detail</>} />

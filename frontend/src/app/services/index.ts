@@ -1,2 +1,2 @@
 /* import/export */
-export * from './get-task-list.service';
+export * from './get-note-list.service';

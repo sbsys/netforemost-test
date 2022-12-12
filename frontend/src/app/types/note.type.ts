@@ -1,4 +1,4 @@
-export interface TaskModel {
+export interface NoteModel {
     id: string;
     title: string;
     body: string;

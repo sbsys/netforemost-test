@@ -1,2 +1,2 @@
 /* import/export */
-export * from './TaskListView';
+export * from './NoteListView';

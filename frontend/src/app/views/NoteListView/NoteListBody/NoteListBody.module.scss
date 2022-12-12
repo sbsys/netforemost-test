@@ -1,0 +1,11 @@
+@import 'styles';
+
+.Body {
+    @include flex;
+    @include gap(all sm);
+    flex-grow: 1;
+
+    & > li {
+        list-style: none;
+    }
+}

@@ -1,7 +1,7 @@
 @import 'styles';
 
 .Header {
-    @include bg-color(300);
+    @include bg-color(400);
     @include flex;
     @include gap(all sm);
     @include padding(all sm);
