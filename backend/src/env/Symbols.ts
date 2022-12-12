@@ -1,19 +1,19 @@
 export const Symbols = {
     /* serializers */
-    TaskSerializer: Symbol.for('TaskSerializer'),
+    NoteSerializer: Symbol.for('NoteSerializer'),
     /* repositories */
-    TaskRepository: Symbol.for('TaskRepository'),
+    NoteRepository: Symbol.for('NoteRepository'),
     /* use cases */
-    CreateTaskUseCase: Symbol.for('CreateTaskUseCase'),
-    GetTaskListUseCase: Symbol.for('GetTaskListUseCase'),
-    UpdateTaskUseCase: Symbol.for('UpdateTaskUseCase'),
+    CreateNoteUseCase: Symbol.for('CreateNoteUseCase'),
+    GetNoteListUseCase: Symbol.for('GetNoteListUseCase'),
+    UpdateNoteUseCase: Symbol.for('UpdateNoteUseCase'),
     /* handlers */
     /* controllers */
-    CreateTaskController: Symbol.for('CreateTaskController'),
-    GetTaskListController: Symbol.for('GetTaskListController'),
-    UpdateTaskController: Symbol.for('UpdateTaskController'),
+    CreateNoteController: Symbol.for('CreateNoteController'),
+    GetNoteListController: Symbol.for('GetNoteListController'),
+    UpdateNoteController: Symbol.for('UpdateNoteController'),
     /* routes */
-    TaskRoutes: Symbol.for('TaskRoutes'),
+    NoteRoutes: Symbol.for('NoteRoutes'),
     /* apps */
     Api: Symbol.for('Api'),
 };

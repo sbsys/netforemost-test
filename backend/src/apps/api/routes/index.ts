@@ -1,2 +1,2 @@
 /* import/export */
-export * from './Task.routes';
+export * from './Note.routes';
