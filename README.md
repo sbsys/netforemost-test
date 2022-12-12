@@ -15,7 +15,7 @@
   - WEB UI: **3 hours & 45 minutes**
 - **Note detail**
   - API service: **No service**
-  - WEB UI:
+  - WEB UI: **1 hour**
 - **Edit note**
   - API service: **45 minutes**
   - WEB UI:
