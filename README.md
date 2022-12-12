@@ -7,18 +7,18 @@
 
 ## User stories
 
-- **Create task**
+- **Create note**
   - API service: **2 hours**
   - WEB UI:
-- **Task list**
+- **Note list**
   - API service: **35 minutes**
-  - WEB UI:
-- **Task detail**
+  - WEB UI: **3 hours & 45 minutes**
+- **Note detail**
   - API service: **No service**
   - WEB UI:
-- **Edit task**
+- **Edit note**
   - API service: **45 minutes**
   - WEB UI:
-- **Search task**
+- **Search note**
   - API service: **No service**
-  - WEB UI:
+  - WEB UI: **Included into *Note list* time**
