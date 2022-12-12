@@ -6,3 +6,5 @@ export interface NoteModel {
 }
 
 export interface CreateNoteDTO extends Omit<NoteModel, 'id' | 'created'> {}
+
+export interface UpdateNoteDTO extends Omit<NoteModel, 'id' | 'created'> {}
