@@ -1,0 +1,23 @@
+@import 'styles';
+
+.Item {
+    @include bg-color(300);
+    @include gap(all sm);
+    @include padding(all sm);
+    @include rounded(all sm);
+    align-items: center;
+
+    .Title {
+        @include gap(all xs);
+
+        & > h3 {
+            @include font-size(lg);
+            @include font-weight(lg);
+        }
+    }
+
+    .Actions {
+        @include flex(row, center, center);
+        @include gap(all xs);
+    }
+}

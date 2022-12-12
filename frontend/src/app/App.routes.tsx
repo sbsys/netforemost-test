@@ -1,11 +1,21 @@
 /* react */
 import { FC, memo } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+/* views */
+import { NoteListView } from './views';
 
 const AppRoutes: FC = () => {
     return (
         <Routes>
-            <Route index element={<Navigate to="tasks" replace />} />
+            <Route index element={<Navigate to="notes" replace />} />
+
+            <Route path="notes" element={<NoteListView />}>
+                <Route path="create" element={<>Create</>} />
+
+                <Route path=":taskId/detail" element={<>Detail</>} />
+
+                <Route path=":taskId/edit" element={<>Edit</>} />
+            </Route>
 
             <Route path="*" element={<span>404</span>} />
         </Routes>

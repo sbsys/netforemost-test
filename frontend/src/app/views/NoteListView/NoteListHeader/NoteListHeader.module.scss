@@ -1,0 +1,18 @@
+@import 'styles';
+
+.Header {
+    @include bg-color(400);
+    @include flex;
+    @include gap(all sm);
+    @include padding(all sm);
+    @include rounded(all sm);
+
+    .Actions {
+        @include flex(row, center, center);
+
+        & > button {
+            @include flex(row, center);
+            @include gap(all sm);
+        }
+    }
+}
