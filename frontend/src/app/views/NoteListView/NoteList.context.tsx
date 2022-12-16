@@ -14,6 +14,7 @@ const Context = createContext<NoteListContextProps>({
     /* props */
     createNoteButtonProps: {},
     searchInputProps: { field: {} },
+    sortNotesButtonListProps: [],
 });
 
 export const NoteListProvider: FC<NoteListProviderProps> = ({ context, children }) => {

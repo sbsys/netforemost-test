@@ -9,10 +9,14 @@
 
     .Actions {
         @include flex(row, center, center);
+        @include gap(all xs);
+        flex-wrap: wrap;
 
         & > button {
-            @include flex(row, center);
+            @include flex(row, center, center);
             @include gap(all sm);
+            @include max-width(xs, component);
+            @include width(xs, component);
         }
     }
 }
