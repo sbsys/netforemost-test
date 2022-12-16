@@ -24,6 +24,8 @@
   - WEB UI: **Included into *Note list* time**
 - **Fix domain definition**
   - API service: **30 minutes**
+- **Updated note presentation**
+  - WEB UI: **20 minutes**
 
 ## Start projects
 
