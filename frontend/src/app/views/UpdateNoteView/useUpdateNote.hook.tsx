@@ -85,6 +85,7 @@ export const useUpdateNote = () => {
             className: errors.title ? FieldStyles.OutlineDanger : FieldStyles.OutlinePrimary,
             placeholder: 'Title',
             defaultValue: note?.title,
+            autoFocus: true,
             ...register('title'),
         },
         isHintReserved: true,

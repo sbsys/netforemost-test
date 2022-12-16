@@ -16,7 +16,7 @@ import { MdEdit, MdReviews } from 'react-icons/md';
 import { ButtonStyles } from 'shared/styles';
 import styles from './NoteListItem.module.scss';
 
-const NoteListItem: FC<NoteModel> = ({ id, title, created }) => {
+const NoteListItem: FC<NoteModel> = ({ id, title, body, created }) => {
     const {
         /* functions */
         handleNavigateToEditNote,
@@ -30,8 +30,16 @@ const NoteListItem: FC<NoteModel> = ({ id, title, created }) => {
                     <Legend hasDots>{title}</Legend>
                 </h3>
 
-                <Legend hasDots title={format(new Date(created), 'MMM do, yyyy')}>
-                    {format(new Date(created), 'MMM do, yyyy')}
+                <Legend
+                    hasDots
+                    justify="end"
+                    title={format(new Date(created), 'MMM do, yyyy - hh:mm:ss aa')}
+                    className={styles.Datetime}>
+                    {format(new Date(created), 'MMM do, yyyy - h:mm:ss aa')}
+                </Legend>
+
+                <Legend hasDots title={body}>
+                    {body}
                 </Legend>
             </PanelLayout>
 

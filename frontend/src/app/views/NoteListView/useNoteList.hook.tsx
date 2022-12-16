@@ -60,7 +60,7 @@ export const useNoteList = () => {
                 timestamp: new Date(),
             });
 
-        setNotes(service.data.sort((prev, current) => (prev.title > current.title ? 1 : -1)));
+        setNotes(service.data);
     }, [hideLoader, notify, showLoader]);
 
     const handleClearSearchParam = useCallback(() => {

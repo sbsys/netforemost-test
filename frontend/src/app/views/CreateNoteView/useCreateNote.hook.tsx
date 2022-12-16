@@ -79,6 +79,7 @@ export const useCreateNote = () => {
         field: {
             className: errors.title ? FieldStyles.OutlineDanger : FieldStyles.OutlinePrimary,
             placeholder: 'Title',
+            autoFocus: true,
             ...register('title'),
         },
         isHintReserved: true,

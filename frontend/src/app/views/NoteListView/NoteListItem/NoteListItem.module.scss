@@ -8,11 +8,17 @@
     align-items: center;
 
     .Title {
-        @include gap(all xs);
+        @include gap(all xs split);
 
         & > h3 {
             @include font-size(lg);
             @include font-weight(lg);
+        }
+
+        .Datetime {
+            @include font-size(sm);
+            @include font-weight(lg);
+            font-style: italic;
         }
     }
 
