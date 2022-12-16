@@ -33,5 +33,11 @@
 
 No production build yet; please, execute each project in its own console.
 
-- ***`npm start --prefix frontend/`***
-- ***`npm start --prefix backend/`***
+- **backend**
+  - ***`cd backend/`***
+  - ***`npm i`***
+  - ***`npm start`***
+- **frontend**
+  - ***`cd frontend/`***
+  - ***`npm i`***
+  - ***`npm start`***
