@@ -13,6 +13,7 @@ const NoteListHeader = () => {
         /* props */
         createNoteButtonProps,
         searchInputProps,
+        sortNotesButtonListProps,
     } = useNoteListContext();
 
     return (
@@ -22,6 +23,12 @@ const NoteListHeader = () => {
             </div>
 
             <FieldSet {...searchInputProps} />
+
+            <div className={styles.Actions}>
+                {sortNotesButtonListProps.map((sortNotesButtonProps, sortNotesButtonIndex) => (
+                    <Button {...sortNotesButtonProps} key={sortNotesButtonIndex} />
+                ))}
+            </div>
         </section>
     );
 };
