@@ -26,6 +26,8 @@
   - API service: **30 minutes**
 - **Updated note presentation**
   - WEB UI: **20 minutes**
+- **Sort note list control**
+  - WEB UI: **1 hour**
 
 ## Start projects
 
