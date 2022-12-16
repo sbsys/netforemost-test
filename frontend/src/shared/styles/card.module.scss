@@ -1,8 +1,0 @@
-@import 'styles';
-
-.Primary {
-    @include padding(all md);
-    @include rounded(all xs);
-    @include shadow(all xs);
-    @include shadow-color(all 200 primary);
-}
